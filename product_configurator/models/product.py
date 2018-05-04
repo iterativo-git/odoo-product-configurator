@@ -660,7 +660,6 @@ class ProductProduct(models.Model):
                 value_ids, custom_vals)
 
             product.price_extra = prices['total'] - lst_price
-            # product.price_extra = prices['total'] - prices['taxes'] - lst_price
 
     config_name = fields.Char(
         string="Name",
