@@ -71,7 +71,7 @@ class ProductAttribute(models.Model):
 
     required = fields.Boolean(
         string='Required',
-        default=True,
+        default=False,
         help='Determines the required value of this '
         'attribute though it can be change on '
         'the template level'
