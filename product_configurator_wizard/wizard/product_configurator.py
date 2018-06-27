@@ -945,7 +945,7 @@ class ProductConfigurator(models.TransientModel):
         # error legitimately raised in a nested routine
         # is passed through.
         try:
-            variant = self.product_tmpl_id.create_get_variant(
+            variant = self.product_tmpl_id.sudo().create_get_variant(
                 self.value_ids.ids, custom_vals)
         except ValidationError:
             raise
