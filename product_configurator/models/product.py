@@ -150,7 +150,7 @@ class ProductTemplate(models.Model):
             )
             product = val.product_id.with_context({'pricelist': pricelist.id})
             product_prices = product.taxes_id.sudo().compute_all(
-                price_unit=product.price,
+                price_unit=0,
                 currency=pricelist.currency_id,
                 quantity=1,
                 product=self,
