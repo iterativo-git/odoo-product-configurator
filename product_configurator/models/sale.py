@@ -18,7 +18,7 @@ class SaleOrderLine(models.Model):
         if literal_eval(self.env['ir.config_parameter'].sudo().get_param('product_configurator.product_selectable', default='False')):
             return []
         else:
-            return [('config_ok', '=', False)]
+            return [('config_ok', '=', True)]
 
     custom_value_ids = fields.One2many(
         comodel_name='product.attribute.value.custom',
