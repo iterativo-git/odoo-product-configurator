@@ -27,4 +27,4 @@ class SaleOrderLine(models.Model):
         string="Custom Values"
     )
 
-    product_id = fields.Many2one(domain=_get_product_domain)
+    product_id = fields.Many2one(domain=[('sale_ok', '=', True)])
